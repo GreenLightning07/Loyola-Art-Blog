@@ -28,18 +28,18 @@ Please direct all questions to the short ginger in the lab AKA Casey Nazelrod.
 
 
 ***AUTHORIZED USERS***
-'User' = 'Password'
-cyber = password
-Anshul (admin) =
-Casey (admin) =
-Nick = 
-Ben =
-Henry = 
-James =
-Brendan =
-Andrew =
-Noah =
-Teddy = 
-Chale =
-Jack =
-Morale =
+'User' = 'Password'  
+cyber = password  
+Anshul (admin) =  
+Casey (admin) =  
+Nick =   
+Ben =  
+Henry =   
+James =  
+Brendan =  
+Andrew =  
+Noah =  
+Teddy =   
+Chale =  
+Jack =  
+Morale =  
