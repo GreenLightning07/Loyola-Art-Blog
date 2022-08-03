@@ -1,4 +1,4 @@
-Welcome to the Beginner Linux Training Image!!!
+Welcome to the Beginner Linux Training Image!!!  
 
 This Linux machine is known to be vulnerable and we need you to fix it.
 
