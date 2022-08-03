@@ -1,4 +1,4 @@
-Welcome to the Beginner Linux Training Image!!!  
+Welcome to the Beginner Linux Training Image!!!
 
 This Linux machine is known to be vulnerable and we need you to fix it.
 
@@ -26,20 +26,25 @@ Remember to take notes, make backups in case you break something, and have fun
 
 Please direct all questions to the short ginger in the lab AKA Casey Nazelrod.
 
+In this README the format for users is username:password
 
 ***AUTHORIZED USERS***
-'User' = 'Password'  
-cyber = password  
-Anshul (admin) =  
-Casey (admin) =  
-Nick =   
-Ben =  
-Henry =   
-James =  
-Brendan =  
-Andrew =  
-Noah =  
-Teddy =   
-Chale =  
-Jack =  
-Morale =  
+
+**ADMINS**  
+Anshul:  
+Casey:  
+
+**STANDARD USERS**  
+'User':'Password'  
+cyber:password  
+Nick:  
+Ben:  
+Henry:   
+James:  
+Brendan:  
+Andrew:  
+Noah:  
+Teddy:  
+Chale:  
+Jack:  
+Morale:  
