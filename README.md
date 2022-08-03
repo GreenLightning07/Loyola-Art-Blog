@@ -35,7 +35,6 @@ Anshul:
 Casey:  
 
 **STANDARD USERS**  
-'User':'Password'  
 cyber:password  
 Nick:  
 Ben:  
