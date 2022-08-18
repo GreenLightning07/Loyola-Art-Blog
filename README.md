@@ -8,7 +8,7 @@ allowed on this machine.
 No gaming or hacking software is allowed on this machine as well.
 
 Secure Shell (SSH) is a open-source tool for users to remotely connect to 
-other machines via the command line. It is a critical service that needs
+other machines via the command line. It is the ONLY critical service that is allowed and it needs
 to be secured.
 
 All users are to have a secure password, and password complexity must be 
@@ -17,7 +17,7 @@ login.
 
 We need to add Mr. Morale to the machine. Add a new user called Morale.
 
-We also want to add a super secret linux group on the machine. Create a group called coolzkidcode and add Anshul, Casey, Jack, Andrew, and Brendan to it.
+We also want to add a super secret linux group on the machine. Create a group called theboys and add Anshul, Casey, Jack, Andrew, and Brendan to it.
 
 Do not alter cyber's ability to auto login and do not alter anything with 
 the scoring machine
@@ -46,4 +46,3 @@ Noah:
 Teddy:  
 Chale:  
 Jack:  
-Morale:  
