@@ -8,7 +8,7 @@ allowed on this machine.
 No gaming or hacking software is allowed on this machine as well.
 
 Secure Shell (SSH) is a open-source tool for users to remotely connect to 
-other machines via the command line. It is the ONLY critical service that is allowed and it needs
+other machines via the command line. It is the ONLY service that is allowed and it needs
 to be secured.
 
 All users are to have a secure password, and password complexity must be 
