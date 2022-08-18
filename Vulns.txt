@@ -1,7 +1,7 @@
 Delete wireshark
 Nick is not admin
 Brian and Dom are deleted
-add group called coolzkidcode and add Anshul, Casey, Jack, Andrew, and Brendan
+add group called theboys and add Anshul, Casey, Jack, Andrew, and Brendan
 add user Mr. Morale to the machine
 Remove netcat from crontab and delete it (u might need to fix this vuln)
 Prompt for sudo password
