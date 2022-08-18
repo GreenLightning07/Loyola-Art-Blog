@@ -8,8 +8,7 @@ function update-found
 {
 	#updates vuln found counts in score report
 	
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/200<\/center><\/h3>/g" $score_report
-        sed -i "s/id=\"linux_found\".*/id=\"linux_found\">LINUX ($linux_found\/30)<\/button>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/19<\/center><\/h3>/g" $score_report
 
 	echo $total_found
 }
