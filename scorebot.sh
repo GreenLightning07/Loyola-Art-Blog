@@ -79,7 +79,7 @@ function check()
 		if ( cat $score_report | grep 'id="$2"' | grep "display:none" ); then
 			show-vuln '$2' "Vuln$2;" "$3" $4
 		fi
-	elif ( cat $score_report | grep 'id="$2"' | grep "display:block" ); then
+	elif ( cat $score_report | grep "id=\"$2\"" | grep "display:block" ); then
 		hide-vuln '$2' "$3" "Vuln$2;" $4
 	fi
 }
