@@ -15,7 +15,7 @@ All users are to have a secure password, and password complexity must be
 enforced. It has been already set that the users will be forced to make a password once they 
 login.
 
-We need to add MrMorale to the machine. Add a new user called Morale.
+We need to add Mr. Morale to the machine. Add a new user called Morale.
 
 We also want to add a super secret linux group on the machine. Create a group called theboys and add Anshul, Casey, Jack, Andrew, and Brendan to it.
 
