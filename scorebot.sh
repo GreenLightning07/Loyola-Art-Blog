@@ -2,22 +2,23 @@
 
 total_found=0
 
-score_report="/home/cyber/Desktop/ScoreReport.html"
-
+score_report="/home/bezos/Desktop/ScoreReport.html"
+tail xxzz.txt
+total_found=`cat xxzz.txt`
 function update-found
 {
 	#updates vuln found counts in score report
 	
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/19<\/center><\/h3>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/48<\/center><\/h3>/g" $score_report
 
-	echo $total_found
+	echo $total_found > xxzz.txt
 }
 
 function show-vuln()
 {
 	#allows vuln name to be seen in score report
 	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
-	((total_found++))
+	((total_found+=$4))
 	#replaces placeholder name with actual vuln name (obfuscation)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Congrats!" "You Gained Points"
@@ -28,11 +29,34 @@ function hide-vuln()
 {
 	#hides vuln name from score report
 	sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
-	((total-found--))
+	((total_found-=$4))
 	#replaces placeholder name (people should keep their own notes on the points they've gained)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Uh Oh!" "You Lost Points"
 	update-found
+}
+
+function penalty()
+{
+	sed -i "s/id=\"$1\"style=\"display:none\"/id=\"$1\"style=\"display:block\"/g" $score_report
+	((total_found-=$4))
+        #replaces placeholder name (people should keep their own notes on the points they've gained)
+        sed -i "s/$2/$3/g" $score_report
+        notify-send "Uh Oh!" "You Lost Points"
+        update-found
+
+}
+
+function remove-penalty()
+{
+	#allows vuln name to be seen in score report
+        sed -i "s/id=\"$1\"style=\"display:block\"/id=\"$1\"style=\"display:none\"/g" $score_report
+        ((total_found+=$4))
+        #replaces placeholder name with actual vuln name (obfuscation)
+        sed -i "s/$2/$3/g" $score_report
+        notify-send "Congrats!" "You Gained Points"
+        update-found
+
 }
 
 function notify-send()
