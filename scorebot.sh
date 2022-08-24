@@ -73,4 +73,15 @@ function notify-send()
     sudo -u $user DISPLAY=$display DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$uid/bus notify-send "$@"
 }
 
+function check()
+{
+	if ( $1 ); then
+		if ( cat $score_report | grep 'id="$2"' | grep "display:none" ); then
+			show-vuln '$2' "Vuln$2;" "$3" $4
+		fi
+	elif ( cat $score_report | grep 'id="$2"' | grep "display:block" ); then
+		hide-vuln '$2' "$3" "Vuln$2;" $4
+	fi
+}
+
 update-found
