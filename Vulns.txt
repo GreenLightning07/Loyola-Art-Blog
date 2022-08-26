@@ -16,4 +16,3 @@ X11 Forwarding
 Max, min, and warn days for password
 login retries
 firefox dangerous content and HTTPS only (might need to check that too)
-enforce password complexity with cracklibpam
