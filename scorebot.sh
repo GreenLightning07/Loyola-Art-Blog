@@ -2,16 +2,16 @@
 
 total_found=0
 
-score_report="/home/cyber/Desktop/ScoreReport.html"
-tail xxzz.txt
-total_found=`cat xxzz.txt`
+score_report="/home/USERNAME/Desktop/ScoreReport.html"
+tail /usr/local/bin/xxzz.txt
+total_found=`cat /usr/local/bin/xxzz.txt`
 function update-found
 {
 	#updates vuln found counts in score report
 	
         sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/54<\/center><\/h3>/g" $score_report
 
-	echo $total_found > xxzz.txt
+	echo $total_found > /usr/local/bin/xxzz.txt
 }
 
 function show-vuln()
@@ -22,7 +22,6 @@ function show-vuln()
 	#replaces placeholder name with actual vuln name (obfuscation)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Congrats!" "You Gained Points"
-	update-found
 }
 
 function hide-vuln()
@@ -33,7 +32,6 @@ function hide-vuln()
 	#replaces placeholder name (people should keep their own notes on the points they've gained)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Uh Oh!" "You Lost Points"
-	update-found
 }
 
 function penalty()
@@ -43,8 +41,6 @@ function penalty()
         #replaces placeholder name (people should keep their own notes on the points they've gained)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Uh Oh!" "You Lost Points"
-        update-found
-
 }
 
 function remove-penalty()
@@ -55,8 +51,6 @@ function remove-penalty()
         #replaces placeholder name with actual vuln name (obfuscation)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Congrats!" "You Gained Points"
-        update-found
-
 }
 
 function notify-send()
@@ -88,26 +82,9 @@ update-found
 
 while true
 do
-	check "! dpkg -l | grep wireshark" "1" "Wireshark is removed +5" "5"
-	check "! cat /etc/group | grep sudo | grep -iF nick" "2" "Nick is not an admin +2" "2"
-	check "! cat /etc/passwd | grep -iF brian" "3" "Unauthorized user Brian is removed +2" "2"
-	check "! cat /etc/passwd | grep -iF dom" "4" "Unauthorized user Dom is removed +2" "2"
-	check "cat /etc/group | grep -iF theboys" "5" "Group theboys is added +1" "1"
-	check "cat /etc/group | grep -iF theboys | grep -iF anshul | grep -iF casey | grep -iF jack | grep -iF  andrew | grep -iF  brendan" "6" "Anshul, Casey, Jack, and Brendan are added to theboys +1" "1"
-	check "cat /etc/passwd | grep -iF morale" "7" "user Morale is added +1" "1"
-	check "! cat /etc/apt/sources.list | grep ^\"deb\" | grep -iF us.archive" "8" "Downloading packages from Main Server +3" "3" 
-	check "! cat /var/spool/cron/crontabs/root | grep netcat && ! dpkg -l | grep netcat" "9" "Netcat backdoor is removed and netcat is deleted +10" "10"
-	check "! cat /etc/sudoers | grep NOPASSWD" "10" "Visudo is correctly configured +5" "5"
-	check "! cat /etc/shadow | grep cyber | grep \$1\$" "11" "Secure password set for cyber +5" "5"
-	check "cat /etc/ssh/sshd_config | grep ^PermitRootLogin | grep -iF no" "12" "Root login for SSH disabled +2" "2"
-	check "cat /etc/ssh/sshd_config | grep ^StrictModes | grep -iF yes" "13" "Strict modes enabled +3" "3"
-	check "cat /etc/ssh/sshd_config | grep ^MaxAuthTris | grep 3" "14" "Max authentication tries for SSH lowered to 3 +5" "5"
-	check "cat /etc/ssh/sshd_config | grep ^MaxSessions | grep 13" "15" "Max sessions set to appropriate amount +10" "10" 
-	check "cat /etc/ssh/sshd_config | grep ^PermitEmptyPasswords | grep -iF no" "16" "Permit empty passwords set to false +3" "3"
-	check "cat /etc/ssh/sshd_config | grep ^X11Forwarding | grep -iF no" "17" "Disable X11 Forwarding +5" "5"
-	check "cat /etc/login.defs | grep PASS_MAX_DAYS | grep 90 && cat /etc/login.defs | grep PASS_MIN_DAYS | grep 10 && cat /etc/login.defs | grep PASS_WARN_AGE | grep 7" "18" "Login.defs properly configured +6" "6"
-	check "cat /etc/pam.d/common-auth | grep -iF deny | grep 5" "19" "Login retries set to 5 +2" "2"
-	check "! cat /home/cyber/.mozilla/firefox/f69cat5j.default-release/prefs.js | grep false | grep malware && cat /home/cyber/.mozilla/firefox/f69cat5j.default-release/prefs.js | grep -v ever | grep  https_only_mode" "20" "Firefox properly configured +4" "4"
+	update-found
+	
+	check "IF STATEMET" "VULN NUM" "WHAT TO DISPLAY ON SCORE REPORT" "POINTS"
 
 	sleep 10
 done
