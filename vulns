@@ -1,0 +1,22 @@
+f1
+f2
+f3
+unauth admin
+unauth user
+insecure password
+hidden user
+shadow permissions
+/var/www permissions
+passwd user
+sysctl
+sysctl
+login.defs
+pam
+symbolic link in /var/www/html
+apache2
+mysql table with credit cards
+mysql vuln
+ufw
+firefox
+update
+update
