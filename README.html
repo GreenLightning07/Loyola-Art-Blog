@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Breaking Bad | README</title>
+</head>
+
+<body>
+	<nav>
+		<div class="logo">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg">
+		</div>
+		<div class="nav-links">
+			<a class="active"href="file:///home/skipper/Desktop/README.html">README</a>
+			<a href="file:///home/skipper/Desktop/ScoreReport.html">ScoreReport</a>
+			<a href="file:///home/skipper/Desktop/Contact.html">Contact</a>
+		</div>
+	</nav>
+	
+	<div class="scenario">
+		<h2>Scenario</h2><br>
+    <p>DO NOT DELETE GIT OR REMOVE THE LINE RUNNING StartScoring.sh IN CRONTAB.</p><br>
+		<p>Skipper has asked you to secure his LAMP Stack server using his account. Only authorized admins may be administrators. Please remove any unauthorized users. All services should be running on their default ports. There may be absolutely NO hacking tools or non-work related media files. Lastly, Skipper has asked you to add private as a user.</p>
+	</div>
+	<div class="services">
+		<h2>Critical Services</h2><br>
+		<p>Apache2 - N/A</p><br>
+		<p>Mysql - mysql root:root</p><br>
+		<p>PHP - N/A</p><br>	
+	</div>
+	<div class="users">
+		<h2>Authorized Accounts</h2><br>
+		<h3>Admins:</h3><br>
+		<p>
+		skipper:cyber<br>
+		kowalski:An@lyz3th3D@taK0w@lski<br>
+		rico:Funky3P3ngu1nM@n<br>
+		private:d03verythingPe@cefully<br><br>
+		</p>
+		<h3>Users:</h3><br>
+		<p>
+		mort<br>
+    gloria<br>
+    melman<br>
+    kingjulien<br>
+    marty<br>
+    alex<br>
+    maurice<br>
+		</p>
+	</div>
+</body>
+
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	
+	nav{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 8vh;
+		background-color: #001f09;
+		font-family: arial;
+		margin: auto;
+		box-shadow: 0px 1px 10px #999;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	.nav-links{
+                display: flex;
+                justify-content: space-around;
+		width: 30%;
+        }
+	
+	.nav-links a{
+		position: relative;
+		color: #d3e0d6;
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-weight: bold;
+		padding: 0 10px;
+	}
+	
+	.nav-links a:after{
+		content: "";
+		position: absolute;
+		background-color: #d3e0d6;
+		height: 3px;
+		width: 0%;
+		right: 0;
+		bottom: -10px;
+		transition: 0.3s;
+	}
+	
+	.nav-links a.active:after{
+		content: "";
+		position: absolute;
+		background-color: #d3e0d6;
+		height: 3px;
+		width: 100%;
+		right: 0;
+		bottom: -10px;
+	}
+	.nav-links a.active{
+		color: white;
+	}
+	
+	.nav-links a:hover{
+		color: white;
+	}
+	
+	.nav-links a:hover:after{
+		width: 100%;
+	}
+
+	.scenario{
+                color: #000803;
+                display: block;
+		text-align: center;
+		margin-top: 110px;
+		margin-left: 25%;
+		margin-right: 25%;
+		letter-spacing: 1px;
+		font-family: arial;
+		position: relative;
+		padding: 0 50px;
+		line-height: 16pt;
+        }
+
+	.scenario:after{
+		content: "";
+		position: absolute;
+		background-color: #000803;
+		height: 3px;
+		width: 100%;
+		right: 0;
+		bottom: -25px;		
+	}
+
+	.requirements{
+		color: #000803;
+                display: block;
+                text-align: center;
+                margin-top: 45px;
+                margin-left: 25%;
+                margin-right: 25%;
+                letter-spacing: 1px;
+                font-family: arial;
+                position: relative;
+                padding: 0 50px;
+		line-height: 16pt;
+	}
+
+	.requirements:after{
+                content: "";
+                position: absolute;
+                background-color: #000803;
+                height: 3px;
+                width: 100%;
+                right: 0;
+                bottom: -25px;
+        }
+	
+	.services{
+		color: #000803;
+                display: block;
+                text-align: center;
+                margin-top: 45px;
+                margin-left: 25%;
+                margin-right: 25%;
+                letter-spacing: 1px;
+                font-family: arial;
+                position: relative;
+                padding: 0 50px;
+		line-height: 16pt;
+	}
+
+	.services:after{
+                content: "";
+                position: absolute;
+                background-color: #000803;
+                height: 3px;
+                width: 100%;
+                right: 0;
+                bottom: -25px;
+        }
+
+	.users{
+                color: #000803;
+                display: block;
+                text-align: center;
+		margin-top: 45px;
+		margin-bottom: 25px;
+                letter-spacing: 1px;
+                font-family: arial;
+                position: relative;
+                padding: 0 50px;
+		line-height: 16pt;
+        }
+
+	body{
+                background-color: #d3e0d6;
+        }
+
+
+	img{
+		width: 25%;
+		margin: 10px;
+	{
+	
+</style>
