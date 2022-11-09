@@ -1,22 +1,23 @@
 f1 - We need you to decrypt King julian's last words. Right before sending this message this he said that his name (including title) is the key to it all. s tvqn nz uoio qg sxpp qt - i like to move it move it
-f2 - linux skill
-f3 - 
-unauth admin
-unauth user
-insecure password
-hidden user
-shadow permissions
-/var/www permissions
-passwd user
-sysctl
-sysctl
-login.defs
-pam
-symbolic link in /var/www/html
-apache2
-mysql table with credit cards
-mysql vuln
-ufw
-firefox
-update
-update
+f2 - what is the name of the malicious python script running on this machine - youareanidiot.py
+f3 - what is the md5sum of this file
+Unauthorized admin Mort removed
+Removed unathorized user Dave
+Insecure password on Kowalski changed
+Hidden user MotoMoto removed
+Changed insecure permissions set on /etc/shadow
+Changed insecure permissions set on /var/www
+Correct user set on /etc/passwd
+Log Martian Packets enabled
+ASLR enabled
+Max password days set
+Minlen set to 8 or greater
+Removed symbolic link in /var/www/html
+Correct timout time set
+Removed mysql table with credit cards
+Secure transport enabled
+UFW is active and enabled
+HTTPS only mode set
+Apache2 is updated
+Kernel is updated
+Removed malicous python script
