@@ -113,8 +113,12 @@ update-found
 
 while true
 do
-	#linux vulns
+	#Forensics
 	check 'cat /home/skipper/Desktop/Forensics1 | grep "i like to move it move it"' '1' 'Forensics 1 Correct +5' '5'
+	check 'cat /home/skipper/Desktop/Forensics2 | grep "youareanidiot.py"' '2' 'Forensics 2 Correct +5' '5'
+	check 'cat /home/skipper/Desktop/Forensics3 | grep "a6155be26441bfcec1fd786651a38f3d"' '3' 'Forensics 3 Correct +5' '5'
+	
+	#Vulns
 	
 	#wait 10 seconds
 	sleep 10
