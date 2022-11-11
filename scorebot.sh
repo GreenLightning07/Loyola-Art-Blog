@@ -101,8 +101,8 @@ do
 	check 'cat /home/skipper/Desktop/Forensics3 | grep "a6155be26441bfcec1fd786651a38f3d"' '3' 'Forensics 3 Correct +5' '5'
 	
 	#Vulns
-	check 'cat /etc/group | grep "sudo" | grep "mort"' '4' 'User mort is not an admin +2' '2'
-	check 'cat /etc/passwd | grep "dave"' '5' 'Unauthorized user dave removed +2' '2'
+	check '! cat /etc/group | grep "sudo" | grep "mort"' '4' 'User mort is not an admin +2' '2'
+	check '! cat /etc/passwd | grep "dave"' '5' 'Unauthorized user dave removed +2' '2'
 	check '! cat /etc/shadow | grep "kowalski" | grep "PUT HASH HERE"' '6' 'Insecure password on kowalski changed +2' '2'
 	check '! cat /etc/shadow | grep "motomoto"' '7' 'Hidden user motomoto removed +4' '4'
 	
