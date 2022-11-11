@@ -108,7 +108,7 @@ do
 	check 'cat /etc/passwd | grep "private"' '8' 'User private created +1' '1'
 	check 'ls -al /etc/shadow | grep "\-rw-r-----" || ls -al /etc/shadow | grep "\-rw-------"' '9' 'Correct file permissions set on \/etc\/shadow +3' '3'
 	check 'ls -al /var/ | grep "www" | grep "dr--r--r--"' '10' 'Correct file permissions set on \/var\/www\/ +3' '3'
-	check 'ls -al /etc/passwd | cut -d ' ' -f3 | grep "root"' 'Correct owner set on \/etc\/passwd +3' '3'
+	check 'ls -al /etc/passwd | cut -d ' ' -f3 | grep "root"' '11' 'Correct owner set on \/etc\/passwd +3' '3'
 
 	
 	#wait 10 seconds
