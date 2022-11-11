@@ -34,7 +34,6 @@ function show-vuln()
 	#replaces placeholder name with actual vuln name (obfuscation)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Congrats!" "You Gained Points"
-	update-found
 }
 
 function hide-vuln()
@@ -45,7 +44,6 @@ function hide-vuln()
 	#replaces placeholder name (people should keep their own notes on the points they've gained)
 	sed -i "s/$2/$3/g" $score_report
 	notify-send "Uh Oh!" "You Lost Points"
-	update-found
 }
 
 function penalty()
@@ -57,8 +55,6 @@ function penalty()
         #replaces placeholder name (people should keep their own notes on the points they've gained)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Uh Oh!" "You Lost Points"
-        update-found
-
 }
 
 function remove-penalty()
@@ -71,8 +67,6 @@ function remove-penalty()
         #replaces placeholder name with actual vuln name (obfuscation)
         sed -i "s/$2/$3/g" $score_report
         notify-send "Congrats!" "You Gained Points"
-        update-found
-
 }
 
 function notify-send()
@@ -115,6 +109,8 @@ update-found
 
 while true
 do
+	update-found
+	
 	#Forensics
 	check 'cat /home/skipper/Desktop/Forensics1 | grep "i like to move it move it"' '1' 'Forensics 1 Correct +5' '5'
 	check 'cat /home/skipper/Desktop/Forensics2 | grep "youareanidiot.py"' '2' 'Forensics 2 Correct +5' '5'
