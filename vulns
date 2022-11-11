@@ -5,6 +5,7 @@ Unauthorized admin Mort removed
 Removed unathorized user Dave
 Insecure password on Kowalski changed
 Hidden user MotoMoto removed
+User private created
 Changed insecure permissions set on /etc/shadow
 Changed insecure permissions set on /var/www
 Correct user set on /etc/passwd
