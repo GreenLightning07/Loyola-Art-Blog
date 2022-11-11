@@ -105,6 +105,8 @@ do
 	check '! cat /etc/passwd | grep "dave"' '5' 'Unauthorized user dave removed +2' '2'
 	check '! cat /etc/shadow | grep "kowalski" | grep "PUT HASH HERE"' '6' 'Insecure password on kowalski changed +2' '2'
 	check '! cat /etc/shadow | grep "motomoto"' '7' 'Hidden user motomoto removed +4' '4'
+	check 'cat /etc/passwd | grep "private"' '8' 'User private created +1' '1'
+	check
 	
 	#wait 10 seconds
 	sleep 10
