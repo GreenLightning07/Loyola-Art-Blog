@@ -109,6 +109,8 @@ do
 	check 'ls -al /etc/shadow | grep "\-rw-r-----" || ls -al /etc/shadow | grep "\-rw-------"' '9' 'Correct file permissions set on \/etc\/shadow +3' '3'
 	check 'ls -al /var/ | grep "www" | grep "dr--r--r--"' '10' 'Correct file permissions set on \/var\/www\/ +3' '3'
 	check 'ls -al /etc/passwd | cut -d " " -f3 | grep "root"' '11' 'Correct owner set on \/etc\/passwd +3' '3'
+	check 'cat /etc/sysctl.conf | grep ^"net.ipv4.all.log_martians" | grep "1"' '12' 'Logging martian packets enabled +2' '2'
+	check 'cat /etc/sysctl.conf | grep ^"kernel.randomize_va_space" | grep "1"' '13' 'ASLR is enabled +2' '2'
 
 	
 	#wait 10 seconds
