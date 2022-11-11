@@ -73,7 +73,7 @@ function notify-send()
     local display=":$(ls /tmp/.X11-unix/* | sed 's#/tmp/.X11-unix/X##' | head -n 1)"
 
     #Detect the user using such display
-    local user=$(who | grep '('$display')' | awk '{print $1}' | head -n 1)
+    local user='skipper'
 
     #Detect the id of the user
     local uid=$(id -u $user)
