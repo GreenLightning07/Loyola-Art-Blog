@@ -41,7 +41,7 @@ function hide-vuln()
 	((total_found-=$4))
 	#replaces placeholder name (people should keep their own notes on the points they've gained)
 	sed -i "s/$2/$3/g" $score_report
-	sudo -u skipper DISPLAY=:0.0 notify-send"Uh Oh!" "You Lost Points"
+	sudo -u skipper DISPLAY=:0.0 notify-send "Uh Oh!" "You Lost Points"
 }
 
 function penalty()
