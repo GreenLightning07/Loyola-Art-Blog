@@ -105,7 +105,7 @@ do
 	check '! cat /etc/passwd | grep "dave"' '5' 'Unauthorized user dave removed +2' '2'
 	check '! cat /etc/shadow | grep "kowalski" | grep "PUT HASH HERE"' '6' 'Insecure password on kowalski changed +2' '2'
 	check '! cat /etc/shadow | grep "motomoto"' '7' 'Hidden user motomoto removed +4' '4'
-	check 'cat /etc/passwd | grep "private"' '8' 'User private created +1' '1'
+	check 'cat /etc/group | grep "sudo" | grep "private"' '8' 'User private is an administrator +1' '1'
 	check 'ls -al /etc/shadow | grep "\-rw-r-----" || ls -al /etc/shadow | grep "\-rw-------"' '9' 'Correct file permissions set on \/etc\/shadow +3' '3'
 	check 'ls -al /var/ | grep "www" | grep "dr--r--r--"' '10' 'Correct file permissions set on \/var\/www\/ +3' '3'
 	check 'ls -al /etc/passwd | cut -d " " -f3 | grep "root"' '11' 'Correct owner set on \/etc\/passwd +3' '3'
