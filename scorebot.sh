@@ -8,7 +8,6 @@ pam_configed=false
 encrypt_set=false
 
 score_report="/home/skipper/Desktop/ScoreReport.html"
-export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/1000/bus}"
 
 function update-found
 {
@@ -32,7 +31,7 @@ function show-vuln()
 	((total_found+=$4))
 	#replaces placeholder name with actual vuln name (obfuscation)
 	sed -i "s/$2/$3/g" $score_report
-	notify-send "Congrats!" "You Gained Points"
+	sudo -u skipper DISPLAY=:0.0 notify-send "Congrats!" "You Gained Points"
 }
 
 function hide-vuln()
@@ -42,7 +41,7 @@ function hide-vuln()
 	((total_found-=$4))
 	#replaces placeholder name (people should keep their own notes on the points they've gained)
 	sed -i "s/$2/$3/g" $score_report
-	notify-send "Uh Oh!" "You Lost Points"
+	sudo -u skipper DISPLAY=:0.0 notify-send"Uh Oh!" "You Lost Points"
 }
 
 function penalty()
@@ -53,7 +52,7 @@ function penalty()
 		
         #replaces placeholder name (people should keep their own notes on the points they've gained)
         sed -i "s/$2/$3/g" $score_report
-        notify-send "Uh Oh!" "You Lost Points"
+        sudo -u skipper DISPLAY=:0.0 notify-send "Uh Oh!" "You Lost Points"
 }
 
 function remove-penalty()
@@ -65,7 +64,7 @@ function remove-penalty()
 	
         #replaces placeholder name with actual vuln name (obfuscation)
         sed -i "s/$2/$3/g" $score_report
-        notify-send "Congrats!" "You Gained Points"
+        sudo -u skipper DISPLAY=:0.0 notify-send "Congrats!" "You Gained Points"
 }
 
 function check()
