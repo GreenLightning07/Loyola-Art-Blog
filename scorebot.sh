@@ -8,7 +8,7 @@ pam_configed=false
 encrypt_set=false
 
 score_report="/home/skipper/Desktop/ScoreReport.html"
-export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/${UID}/bus}"
+export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/1000/bus}"
 
 function update-found
 {
