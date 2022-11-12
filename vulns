@@ -12,7 +12,7 @@ Correct user set on /etc/passwd
 Log Martian Packets enabled
 ASLR enabled
 Max password days set
-Minlen set to 8 or greater
+Minlen set to 16
 Removed symbolic link in /var/www/html
 Correct timout time set
 Removed mysql table with credit cards
