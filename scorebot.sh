@@ -114,7 +114,7 @@ do
 	check 'cat /etc/login.defs | grep "PASS_MAX_DAYS" | grep "90"' '14' 'Max password days set to 90 +2' '2'
 	check 'cat /etc/security/pwquality.conf | grep "minlen" | grep "16"' '15' 'Password minimum legnth set to 16 +3' '3'
 	check '! ls -al /var/www/ | grep "\.\.\." | grep "\->"' '16' 'Symbolic link to \/ directory in \/var\/www\/ removed +4' '4'
-	check 'cat /etc/apache2/conf-available/security.conf | grep "FileETag" | grep -iF "none"' '17' 'ETag headers are disabled +3' '3'
+	check 'cat /etc/apache2/conf-available/security.conf | grep "FileEtag" | grep -iF "none"' '17' 'ETag headers are disabled +3' '3'
 	
 	#wait 10 seconds
 	sleep 10
