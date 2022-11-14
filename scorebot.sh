@@ -12,9 +12,9 @@ score_report="/home/skipper/Desktop/ScoreReport.html"
 function update-found
 {
 	#updates vuln found counts in score report
-	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*2.00)}')
+	total_percent=$(awk -vn=$total_found 'BEGIN{print(n*1.538461538)}')
 	echo $total_percent
-        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/50<\/h3>/g" $score_report
+        sed -i "s/id=\"total_found\".*/id=\"total_found\">$total_found\/65<\/h3>/g" $score_report
         sed -i "s/id=\"total_percent\".*/id=\"total_percent\">$total_percent%<\/h3>/g" $score_report
 	
 	if [ $total_pen == 0 ]; then
