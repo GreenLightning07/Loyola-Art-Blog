@@ -16,7 +16,7 @@ Minlen set to 16
 Removed symbolic link in /var/www/html
 EtagHeaders disabled
 Removed mysql table with credit cards
-Secure transport enabled
+Local infile set to 0
 UFW is active and enabled
 HTTPS only mode set
 Removed malicous python script
