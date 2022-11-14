@@ -116,6 +116,8 @@ do
 	check '! ls -al /var/www/ | grep "\.\.\." | grep "\->"' '16' 'Symbolic link to \/ directory in \/var\/www\/ removed +4' '4'
 	check 'cat /etc/apache2/conf-available/security.conf | grep "FileEtag" | grep -iF "none"' '17' 'ETag headers are disabled +3' '3'
 	check '! mysql -u root -e "use db; show tables;" | grep "cards"' '18' 'MySql database containing credit card information removed +4' '4'
+	check 'cat /etc/mysql/mysqld.conf.d/mysqld.conf | grep "local-infile" | grep "0"' '19' 'Local infile set to 0 +2' '2'
+	check 'ufw status | grep "running"' '20' 'UFW is enabled +1' '1'
 	
 	#wait 10 seconds
 	sleep 10
