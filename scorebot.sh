@@ -118,6 +118,7 @@ do
 	check '! mysql -u root -e "use db; show tables;" | grep "cards"' '18' 'MySql database containing credit card information removed +4' '4'
 	check 'cat /etc/mysql/mysqld.conf.d/mysqld.conf | grep "local-infile" | grep "0"' '19' 'Local infile set to 0 +2' '2'
 	check 'ufw status | grep "running"' '20' 'UFW is enabled +1' '1'
+	check 'cat /home/skipper/snap/firefox/common/.mozilla/firefox/h8bdcys2.default/prefs.js | grep https_only_mode\" | grep true' 
 	
 	#wait 10 seconds
 	sleep 10
