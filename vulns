@@ -14,7 +14,7 @@ ASLR enabled
 Max password days set
 Minlen set to 16
 Removed symbolic link in /var/www/html
-Correct timout time set
+EtagHeaders disabled
 Removed mysql table with credit cards
 Secure transport enabled
 UFW is active and enabled
