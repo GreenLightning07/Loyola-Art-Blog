@@ -19,6 +19,4 @@ Removed mysql table with credit cards
 Secure transport enabled
 UFW is active and enabled
 HTTPS only mode set
-Apache2 is updated
-Kernel is updated
 Removed malicous python script
