@@ -122,7 +122,7 @@ do
 	check '! find / | grep "youareanidiot.py"' '22' 'Malicious python script removed +5' '5'
 	
 	#penalties
-	check-pen '! netstat -tulpn | grep apache2 | cut -d " " -f16 | grep ":80"$' 'p1' 'Apache2 is Disabled or Running on Wrong Port -10' '10'
+	check-pen '! netstat -tulpn | grep apache2 | cut -d " " -f15 | grep ":80"$' 'p1' 'Apache2 is Disabled or Running on Wrong Port -10' '10'
 	check-pen '! netstat -tulpn | grep mysql | cut -d " " -f16 | grep ":3306"$' 'p2' 'MySQL is Disabled or Running on Wrong Port -10' '10'
 	check-pen '! cat /etc/group | grep "sudo:x:" | grep "skipper"' 'p3' 'skipper is Not an Admin -5' '5'
 	check-pen '! cat /etc/group | grep "sudo:x:" | grep "kowalski"' 'p4' 'kowalski is Not an Admin -5' '5'
