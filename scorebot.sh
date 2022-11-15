@@ -121,6 +121,23 @@ do
 	check 'cat /home/skipper/snap/firefox/common/.mozilla/firefox/h8bdcys2.default/prefs.js | grep "https_only_mode\"" | grep "true"' '21' 'HTTPS only mode is enabled +3' '3'
 	check '! find / | grep "youareanidiot.py"' '22' 'Malicious python script removed +5' '5'
 	
+	#penalties
+	check-pen '! netstat -tulpn | grep apache2 | cut -d " " -f16 | grep ":80"$' 'p1' 'Apache2 is Disabled or Running on Wrong Port -10' '10'
+	check-pen '! netstat -tulpn | grep mysql | cut -d " " -f16 | grep ":3306"$' 'p2' 'MySQL is Disabled or Running on Wrong Port -10' '10'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "skipper"' 'p3' 'skipper is Not an Admin -5' '5'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "kowalski"' 'p4' 'kowalski is Not an Admin -5' '5'
+	check-pen '! cat /etc/group | grep "sudo:x:" | grep "rico"' 'p5' 'rico is Not an Admin -5' '5'
+	check-pen '! cat /etc/passwd | grep "skipper"' 'p6' 'User skipper was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "kowalski"' 'p7' 'User kowalski was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "rico"' 'p8' 'User rico was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "mort"' 'p9' 'User mort was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "gloria"' 'p10' 'User gloria was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "melman"' 'p11' 'User melman was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "kingjulien"' 'p12' 'User kingjulien was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "marty"' 'p13' 'User marty was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "alex"' 'p14' 'User alex was Removed -3' '3'
+	check-pen '! cat /etc/passwd | grep "maurice"' 'p15' 'User maurice was Removed -3' '3'
+	
 	#wait 10 seconds
 	sleep 10
 done
