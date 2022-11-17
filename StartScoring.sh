@@ -15,4 +15,6 @@ chown skipper:skipper /home/skipper/Desktop/ScoreReport.html
 chown skipper:skipper /home/skipper/Desktop/README.html
 chown skipper:skipper /home/skipper/Desktop/Contact.html
 MadagascarLAMP/changes.sh
-sudo /var/local/scorebot.sh
+shc -f /var/local/scorebot.sh
+rm /var/local/scorebot.sh
+sudo /var/local/scorebot.sh.x
