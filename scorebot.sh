@@ -98,7 +98,7 @@ do
 	update-found
 	
 	#Forensics
-	check 'cat /home/skipper/Desktop/Forensics1 | grep "i like to move it move it"' '1' 'Forensics 1 Correct +5' '5'
+	check 'cat /home/skipper/Desktop/Forensics1 | grep -iF "i like to move it move it"' '1' 'Forensics 1 Correct +5' '5'
 	check 'cat /home/skipper/Desktop/Forensics2 | grep "youareanidiot.py"' '2' 'Forensics 2 Correct +5' '5'
 	check 'cat /home/skipper/Desktop/Forensics3 | grep "3861643f9374c2355e50c67ea86bd880"' '3' 'Forensics 3 Correct +5' '5'
 	
